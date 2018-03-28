@@ -14,5 +14,9 @@ export class AppComponent {
       'user': '',
       'story': ''
     }
-
+    onSubmit():void
+    {
+      console.log('this runs !!!');
+      
+    }
 }

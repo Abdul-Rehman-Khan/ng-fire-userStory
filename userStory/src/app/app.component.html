@@ -1,11 +1,27 @@
-<h1>
-  User Story
-</h1>
-<input type="text" placeholder="story writer" name="user" [(ngModel)]="userStory.user">
-<br>
-<input type="text" placeholder="story" name="story" [(ngModel)]="userStory.story">
-<p *ngIf="userStory.user && userStory.story">
-  the best story from
-  <b>{{userStory.user}}</b> is
-  <b>"{{userStory.story}}"</b>
-</p>
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <h1>
+      User Story
+    </h1>
+  </div>
+</nav>
+<div class="container">
+  <div class="well well-lg">
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="story writer" name="user" [(ngModel)]="userStory.user">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="story" name="story" [(ngModel)]="userStory.story">
+      </div>
+      <p *ngIf="userStory.user && userStory.story">
+        the best story from
+        <b>{{userStory.user}}</b> is
+        <b>"{{userStory.story}}"</b>
+      </p>
+      <button (click)="onSubmit()" type="button" class="btn btn-default pull-right">Submit</button>
+      <div class="clearfix"></div>
+    </form>
+  </div>
+</div>
