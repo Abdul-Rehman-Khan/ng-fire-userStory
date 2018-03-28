@@ -25,3 +25,25 @@
     </form>
   </div>
 </div>
+<hr>
+<div class="container">
+  <table class="table table-striped" *ngIf="userStoryTable">
+    <thead>
+      <tr>
+        <th>
+          User Name
+        </th>
+        <th>
+          The Story
+        </th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let funstory of userStoryTable | async">
+      <tr>
+        <td>{{funstory.user}}</td>
+        <td>{{funstory.story}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
