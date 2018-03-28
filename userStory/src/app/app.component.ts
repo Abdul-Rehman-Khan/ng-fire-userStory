@@ -14,9 +14,11 @@ export class AppComponent {
       'user': '',
       'story': ''
     }
-    onSubmit():void
-    {
-      console.log('this runs !!!');
-      
+  onSubmit(): void {
+    console.log('this runs !!!');
+    this.userStory = {
+      user: '',
+      story: ''
     }
+  }
 }
