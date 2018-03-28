@@ -1,3 +1,11 @@
 <h1>
-    Welcome to {{ title }}!
+  User Story
 </h1>
+<input type="text" placeholder="story writer" name="user" [(ngModel)]="userStory.user">
+<br>
+<input type="text" placeholder="story" name="story" [(ngModel)]="userStory.story">
+<p *ngIf="userStory.user && userStory.story">
+  the best story from
+  <b>{{userStory.user}}</b> is
+  <b>"{{userStory.story}}"</b>
+</p>
